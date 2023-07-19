@@ -12,7 +12,7 @@ from classes.venue import Venue
 if __name__ == '__main__':
     fake = Faker()
 
-    b1 = Band("Yu's band", "Beijing")
+    b1 = Band("Yu's band", "Japan")
     b2 = Band("Amro's band", "Toronto")
     
     v1 = Venue("japanshow","Japan")
@@ -21,6 +21,6 @@ if __name__ == '__main__':
 
     c1 = Concert("10/10/2023", b1, v1)
     c2 = Concert("07/19/2023", b1, v2)
-    c3 = Concert("02/27/1998", b2, v3)
+    c3 = Concert("02/27/1998", b1, v3)
 
     ipdb.set_trace()

@@ -32,7 +32,8 @@ class Venue:
         return [c for c in Concert.all if c.venue == self]
 
     def bands(self):
-        return [c.band for c in self.concerts()]
+        return list({c.band for c in self.concerts()})
+    # for unique entires in the list (in this instance it's for the band at 1 venue regardless of multiple events)
 
     def concert_on(self, date):
         for concert in self.concerts():

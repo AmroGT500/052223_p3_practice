@@ -32,7 +32,7 @@ class Band:
         return [c for c in Concert.all if c.band == self]
     
     def play_in_venue(self, venue, date):
-        Concert(date, self, venue)
+        return Concert(date, self, venue)
 
     def all_introductions(self):
         return [c.introduction() for c in self.concerts]
